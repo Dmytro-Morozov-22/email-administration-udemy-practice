@@ -7,8 +7,11 @@ public class Email {
 	private String lastName;
 	private String password;
 	private String department;
+	private String email;
 	private int mailboxCapasity;
+	private int defaultPasswordLength = 10;
 	private String alternateEmail;
+	private String companySuffix = ".anycompany.com";
 	
 	//Constactor to receive the first name and last name
 	public Email(String firstName, String lastName) {
@@ -19,6 +22,14 @@ public class Email {
 		//Call a method asking for the department - return the department
 		this.department = setDepertment();
 		System.out.println("Department: " + this.department);
+		
+		//Call a method that returns a random password
+		this.password = randomPassword(defaultPasswordLength);
+		System.out.println("Your password is: " + this.password);
+		
+		//Combine elements to generate email
+		email = firstName.toLowerCase() + "." + lastName.toLowerCase() + "@" + department + companySuffix;
+		System.out.println("Your email is: " + email);
 	}
 	
 	//Ask for the department
@@ -35,5 +46,24 @@ public class Email {
 		in.close();
 		return retunrChoise;
 	}
+	
+	//Generate a random password
+	private String randomPassword(int length) {
+		String passwordSet = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz1234567890!@#$%&*?";
+		char[] password = new char[length];
+		for(int i = 0; i < length; i++) {
+			int randomValue = (int)(Math.random() * passwordSet.length());
+			password[i] = passwordSet.charAt(randomValue);
+		}
+		return String.valueOf(password);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
 
 }
