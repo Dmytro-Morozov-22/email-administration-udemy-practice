@@ -43,9 +43,9 @@ public class Email {
 		int departmentChoise = in.nextInt();
 		String retunrChoise = "";
 		switch(departmentChoise) {
-		case 1: retunrChoise = "sales"; break;
-		case 2: retunrChoise = "development"; break;
-		case 3: retunrChoise = "accounting"; break;
+			case 1: retunrChoise = "sales"; break;
+			case 2: retunrChoise = "development"; break;
+			case 3: retunrChoise = "accounting"; break;
 		}
 		in.close();
 		return retunrChoise;
@@ -94,4 +94,5 @@ public class Email {
 				"COMPANY EMAIL: " + email + "\n" + 
 				"MAILBOX CAPACITY: " + mailboxCapasity + "mb";
 	}
+	
 }
