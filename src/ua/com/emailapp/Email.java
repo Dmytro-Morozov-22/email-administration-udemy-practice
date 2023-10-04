@@ -17,19 +17,17 @@ public class Email {
 	public Email(String firstName, String lastName) {
 		this.firstName = firstName;
 		this.lastName = lastName;
-//		System.out.println("EMAIL CREATED: " + this.firstName + " " + this.lastName);
 		
 		//Call a method asking for the department - return the department
 		this.department = setDepertment();
-		//System.out.println("Department: " + this.department);
-		
+
 		//Call a method that returns a random password
 		this.password = randomPassword(defaultPasswordLength);
-		//System.out.println("Your password is: " + this.password);
+
 		
 		//Combine elements to generate email
 		email = generateEmail(department);
-		//System.out.println("Your email is: " + email);
+
 	}
 	
 	//Generates the correct email depending on the availability of the department
