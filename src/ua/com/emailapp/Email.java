@@ -32,18 +32,12 @@ public class Email {
 		//System.out.println("Your email is: " + email);
 	}
 	
+	//Generates the correct email depending on the availability of the department
 	public String generateEmail(String dep) {
-		
 		if(!dep.isBlank()) dep =  dep + ".";
-		
-		String generatedEmail = firstName.toLowerCase() + "." + lastName.toLowerCase() + "@" + dep + companySuffix;
-		
-//		return generatedEmail;
 		return firstName.toLowerCase() + "." + lastName.toLowerCase() + "@" + dep + companySuffix;
 	}
-	
-	
-	
+
 	//Ask for the department
 	private String setDepertment() {
 		System.out.println("New worker: " + firstName + "\nDEPARTMENT CODES:\n1 for Sales\n2 for Development\n3 for Accounting\n0 for none\nEnter department code:");
@@ -102,53 +96,4 @@ public class Email {
 				"COMPANY EMAIL: " + email + "\n" + 
 				"MAILBOX CAPACITY: " + mailboxCapasity + "mb";
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
 }
